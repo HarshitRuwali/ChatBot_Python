@@ -1,2 +1,2 @@
 # ChatBot_Python
- A local, hoastable ChatBot to reply to people. 
+ A local, hostable ChatBot to reply to people. 
