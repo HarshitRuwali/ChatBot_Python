@@ -18,7 +18,7 @@ word_tokens[:2]
 ['a', 'chatbot', '(', 'also', 'known']
 
 lemmer = nltk.stem.WordNetLemmatizer()
-#WordNet is a semantically-oriented dictionary of English included in NLTK.
+#WordNet is semantically-oriented dictionary of English included in NLTK.
 def LemTokens(tokens):
     return [lemmer.lemmatize(token) for token in tokens]
 remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
@@ -41,6 +41,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 def response(user_response):
     robo_response=''
+    
     sent_tokens.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
     tfidf = TfidfVec.fit_transform(sent_tokens)
